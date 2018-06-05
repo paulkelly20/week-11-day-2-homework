@@ -17,5 +17,4 @@ describe('Dinosaur', function(){
     assert.strictEqual(dinosaur.type, "T-rex");
   })
 
-
 });
