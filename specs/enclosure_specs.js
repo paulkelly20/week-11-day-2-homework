@@ -17,7 +17,13 @@ describe('Enclosure', function(){
   });
 
   it('check that enclosure is empty', function(){
-    assert.strictEqual(enclosure.dinosaurs.length, 0)
+    assert.strictEqual(enclosure.dinosaurs.length, 0);
+  })
+
+  it('check enclosure size after adding dinosaur', function(){
+    enclosure.addDinosaur(dinosaur1);
+    assert.strictEqual(enclosure.dinosaurs.length, 1);
+
   })
 
 });
