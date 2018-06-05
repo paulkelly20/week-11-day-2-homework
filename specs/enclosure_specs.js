@@ -12,7 +12,7 @@ describe('Enclosure', function(){
   beforeEach(function () {
     dinosaur1 = new Dinosaur("Dave", "T rex", 2);
     dinosaur2 = new Dinosaur("Bill", "T rex", 2);
-    dinosaur3 = new Dinosaur("Jeanie","Velociraptor", 8);
+    dinosaur3 = new Dinosaur("Jeanie","Velociraptor", 5);
     enclosure = new Enclosure();
   });
 
@@ -42,5 +42,26 @@ describe('Enclosure', function(){
     assert.strictEqual(enclosure.dinosaursWithOffspringCountOfMoreThan2().length, 1);
   });
 
+  it('check how many dinosaurs will be in enclosure after one year', function(){
+    enclosure.addDinosaur(dinosaur1);
+    assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(1), 3)
+  })
 
+  it('check how many dinosaurs will be in enclosure after year two', function(){
+    enclosure.addDinosaur(dinosaur1);
+    assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(2), 9)
+  })
+
+  it('check how many dinosaurs will be in enclosure after year two for two dinosaurs', function(){
+    enclosure.addDinosaur(dinosaur1);
+    enclosure.addDinosaur(dinosaur3);
+    assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(2),45)
+  })
+
+  it('check after five years how many dinosaurs', function(){
+    enclosure.addDinosaur(dinosaur1)
+    enclosure.addDinosaur(dinosaur2)
+    enclosure.addDinosaur(dinosaur3)
+    assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(3), 174)
+  })
 });

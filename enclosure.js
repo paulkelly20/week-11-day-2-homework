@@ -28,5 +28,16 @@ Enclosure.prototype.dinosaursWithOffspringCountOfMoreThan2 = function () {
 
 };
 
+Enclosure.prototype.calculateFutureNumberOfDinosaurs = function (years) {
+  var counter = this.dinosaurs.length * years;
+  for(var i = 0; i < this.dinosaurs.length ; i++){
+   foundDinosaur = this.dinosaurs[i];
+   if(years === 1){
+    counter += foundDinosaur.offspringPerYear * years;}
+    else counter +=(foundDinosaur.offspringPerYear * years) + (foundDinosaur.offspringPerYear ** years -1);
+  }
+  return counter;
+};
+
 
 module.exports = Enclosure;
