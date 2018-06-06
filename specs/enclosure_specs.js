@@ -58,17 +58,17 @@ describe('Enclosure', function(){
     assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(2),45)
   })
 
+  it('check after three years how many dinosaurs', function(){
+    enclosure.addDinosaur(dinosaur1)
+    enclosure.addDinosaur(dinosaur2)
+    enclosure.addDinosaur(dinosaur3)
+    assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(3), 270)
+  })
+
   it('check after five years how many dinosaurs', function(){
     enclosure.addDinosaur(dinosaur1)
     enclosure.addDinosaur(dinosaur2)
     enclosure.addDinosaur(dinosaur3)
-    assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(3), 171)
-  })
-
-  it('check after ten years how many dinosaurs', function(){
-    enclosure.addDinosaur(dinosaur1)
-    enclosure.addDinosaur(dinosaur2)
-    enclosure.addDinosaur(dinosaur3)
-    assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(5), 3237)
+    assert.strictEqual(enclosure.calculateFutureNumberOfDinosaurs(5), 8262)
   })
 });
