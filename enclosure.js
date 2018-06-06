@@ -40,7 +40,7 @@ Enclosure.prototype.calculateFutureNumberOfDinosaurs = function (years) {
   var counter = 0;
   for(var i = 0; i < this.dinosaurs.length ; i++){
    foundDinosaur = this.dinosaurs[i];
-    counter += 1 * (Math.pow((1 +foundDinosaur.offspringPerYear), years));}
+    counter += (Math.pow((1 +foundDinosaur.offspringPerYear), years));}
   return counter;
 };
 
