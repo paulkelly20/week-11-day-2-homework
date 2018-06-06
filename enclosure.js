@@ -29,14 +29,6 @@ Enclosure.prototype.dinosaursWithOffspringCountOfMoreThan2 = function () {
 };
 
 Enclosure.prototype.calculateFutureNumberOfDinosaurs = function (years) {
-  // var counter = this.dinosaurs.length;
-  // for(var i = 0; i < this.dinosaurs.length ; i++){
-  //  foundDinosaur = this.dinosaurs[i];
-  //  if(years === 1){
-  //   counter += foundDinosaur.offspringPerYear * years;}
-  //   // else counter +=(foundDinosaur.offspringPerYear * years) + (foundDinosaur.offspringPerYear ** years -1);
-  //    else counter += Math.pow(foundDinosaur.offspringPerYear, years) + (foundDinosaur.offspringPerYear * years)
-  // }
   var counter = 0;
   for(var i = 0; i < this.dinosaurs.length ; i++){
    foundDinosaur = this.dinosaurs[i];
